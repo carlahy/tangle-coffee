@@ -1,39 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Carla</title>
-	<script src="js/index.js"></script>
-  <link rel="stylesheet" href="css/main.css" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<title>Coffee Impact</title>
+	<script src="index.js"></script>
+	<script src="Tangle.js"></script>
+    <link rel="stylesheet" href="TangleKit/TangleKit.css" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800|PT+Sans:400,700" rel="stylesheet">
+
+    <script type="text/javascript" src="TangleKit/mootools.js"></script>
+    <script type="text/javascript" src="TangleKit/sprintf.js"></script>
+    <script type="text/javascript" src="TangleKit/BVTouchable.js"></script>
+    <script type="text/javascript" src="TangleKit/TangleKit.js"></script>
+
 </head>
 
-<body>
-	<div class="header row">
-		<div class="col-md-6 col-md-push-3">
-			Carla Hyenne
-		</div>
+<body onload="setUpTangle();">
+
+<h1>More than coffee</h1>
+<br>
+
+<div id="carbon-calculator-coffee">
+	<p>Last week at UCL, students and staff bought <span class="highlight">1968 hot drinks</span> from the Engineering Cafe.</p>
+
+	<p>If <span class="TKAdjustableNumber" data-var="customerPercent" data-min="0" data-max="100" >%</span> of these drinks were served in a reusable cup:</p>
+
+	<div class="smaller-box">
+		<p>Together we would have saved <span class="highlight">&pound</span><span data-var="moneySavedCollective" data-format="%.0f" class="highlight"></span> <sup>1</sup></p>
+
+		<p>Landfill waste would have been reduced by <span data-var="landfillSaved" data-format="%.0f" class="highlight"> cm3</span> <sup>2</sup></p> 
+		
+		<p>UCL's carbon footprint would have been reduced by <span data-var="carbonSaved" data-format="%.0f" class="highlight"> kg of CO2 </span> <sup>2</sup></p>
+
+		<p>This is equivalent to <span class="highlight" data-var="carbonEquivalent" data-format="%.0f"> kilometers on a London bus</span> <sup>3</sup></p>
 	</div>
 
-	<div class="intro row">
-		<div class="col-md-8 col-md-push-2">
-			Hello! I'm Carla, a computer science graduate from UCL (University College London). I love my terminal, minimalism and tae kwon do.
-		</div>
-	</div>
+	<p>This scenario represents a single week, in a single cafe. 
+	In that same week across UCL, 7976 hot drinks were served. And so on...</p
 
-	<div class="projects row">
-		<div class="col-md-8 col-md-push-2">
-			See my recent work:
-			Carbon Calc, Apple Label
-		</div>
-	</div>
+</div>
 
-
-	<div class="footer row">
-		<div class="col-md-6 col-md-push-3">
-			Find me on <a href="https://github.com/carlahy/">Github</a>, <a href="https://www.linkedin.com/in/carlahy/">LinkedIn</a>, <a href="https://twitter.com/carlahy_">Twitter</a>
-		</div>
-	</div>
+<br></br>
+<div id="sources">
+	<h4>Sources</h4>
+	<p>These statistics are based on UK data and where applicable London data.</p>
+	<ol>
+		<li>10% off for bringing your own cup, averaged to 25p per drink</li>
+		<li>From Carbon Clear https://carbon-clear.com/files/Reuseable_vs_Disposable_Cups_2012.pdf</li>
+		<li>TFL 2010-2011 envrionment report states that London buses emit 78 grams of CO2 per passenger km. http://content.tfl.gov.uk/tfl-health-safety-and-environment-report-2011.pdf</li>
+	</ol>
+</div>
 
 
 </body>
